@@ -59,9 +59,8 @@ const server = http.createServer((req, resp) => {
                 }
             } else {
                 console.log(req.url);                
-                resp.writeHead(200, {'Content-Type': "text/html"});
-                resp.end(content, "utf8");            
-            
+                resp.writeHead(200, {'Content-Type': contentType});
+                resp.end(content, "utf8");
                 //console.log(resp.contentType);            
             }
         });
